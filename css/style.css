@@ -1,13 +1,14 @@
 body {
-  font-family: var(--font-main);
+  background-color: var(--color-bg-white);
   color: var(--color-text-dark);
-}
-body {
-    background-color: var(--color-bg-white);
-    color: var(--color-text-dark);
-    font-family: var(--font-main);
+  font-family: var(--font-main);
+  margin: 0;
+  padding: 20px;
 }
 
 h1 {
-  color: var(--color-brand-blue); /* El título principal usará el azul INDEASA */
+color: var(--color-brand-blue);
+  border-bottom: 3px solid var(--color-primary-green);
+  padding-bottom: 5px; /* Esto da espacio para que el borde sea visible */
+  display: inline-block;
 }
