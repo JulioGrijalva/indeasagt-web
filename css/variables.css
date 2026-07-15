@@ -1,0 +1,18 @@
+/* 
+ * Design System: Proyecto Phoenix - INDEASA
+ * Variables globales de identidad visual
+ */
+
+:root {
+  /* Paleta corporativa INDEASA */
+  --color-primary-green: #008744;    /* Logo y elementos ambientales */
+  --color-secondary-orange: #f37321; /* Acentos y énfasis */
+  --color-brand-blue: #2e3192;       /* Tipografía corporativa principal */
+  
+  /* Colores de soporte */
+  --color-bg-white: #ffffff;
+  --color-text-dark: #333333;
+
+  /* Tipografía */
+  --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
