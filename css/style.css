@@ -190,3 +190,111 @@ body {
   text-align: center;
   color: #777;
 }
+
+/* ==========================================================================
+   Componente: Sección Proyecto Destacado (Hidroeléctrica)
+   ========================================================================== */
+.featured-project-section {
+  background-color: var(--color-brand-blue);
+  color: white;
+  padding: 60px 0;
+  border-radius: 12px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  box-shadow: 0 10px 30px rgba(46, 49, 146, 0.15);
+}
+
+.project-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+@media (min-width: 768px) {
+  .project-layout {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.project-info {
+  flex: 1.2;
+}
+
+.project-specs {
+  flex: 0.8;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project-tag {
+  color: var(--color-secondary-orange);
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.project-title {
+  color: white;
+  font-size: 2rem;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.project-description {
+  color: #e2e8f0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* Fichas de especificaciones */
+.spec-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 12px;
+}
+
+.spec-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.spec-label {
+  display: block;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.spec-value {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+  margin-top: 2px;
+  display: block;
+}
+
+/* Ajuste específico para el botón en fondo oscuro */
+.btn-secondary {
+  background-color: var(--color-secondary-orange);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: opacity 0.3s ease;
+}
+
+.btn-secondary:hover {
+  opacity: 0.9;
+}
