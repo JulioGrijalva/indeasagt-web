@@ -88,7 +88,75 @@
 
             </div>
         </section>
-    </main>
+        <!-- [Sección anterior de la Hidroeléctrica...] -->
+
+        <!-- Sección de Contacto Dinámica -->
+        <section class="contact-section">
+            <h2 class="section-title">Inicie una Consulta Técnica</h2>
+            <p class="contact-subtitle">
+                Si tiene un proyecto de infraestructura, energía o requiere una consultoría especializada, complete el formulario y nos comunicaremos con usted a la brevedad.
+            </p>
+
+            <div class="contact-layout">
+                <!-- Formulario de Contacto -->
+                <form class="contact-form" action="https://formspree.io/f/tu-endpoint" method="POST">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Nombre Completo</label>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="Ej. Ing. Carlos Fuentes" required>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="email" class="form-label">Correo Electrónico</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="correo@empresa.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Teléfono de Contacto</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" placeholder="+502 5555-5555">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Asunto / Tipo de Proyecto</label>
+                        <select id="subject" name="subject" class="form-select">
+                            <option value="ingenieria">Ingeniería y Obras Civiles</option>
+                            <option value="energia">Energía y Sustentabilidad</option>
+                            <option value="consultoria">Consultoría de Inversión</option>
+                            <option value="otro">Otro Requerimiento</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="form-label">Detalles del Requerimiento</label>
+                        <textarea id="message" name="message" rows="5" class="form-textarea" placeholder="Describa brevemente el alcance de su proyecto..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary" style="width: 100%; border: none;">
+                        Enviar Mensaje Seguro
+                    </button>
+                </form>
+
+                <!-- Tarjeta de Información de Contacto Directo -->
+                <div class="contact-info-card">
+                    <h3 class="info-card-title">Oficina Central</h3>
+                    <p class="info-card-text">
+                        Nuestras oficinas están ubicadas en el centro corporativo de la Zona 10 de la Ciudad de Guatemala.
+                    </p>
+                    <div class="info-details">
+                        <div class="info-item">
+                            <span class="info-icon">📍</span>
+                            <span>12 Calle 1-25 Zona 10, Edificio Géminis 10, Torre Norte, Oficina 305</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">✉️</span>
+                            <a href="mailto:ingeargueta@indeasagt.com" class="info-link">ingeargueta@indeasagt.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main> <!-- Cierre del main container -->
+    
 
     <footer class="main-footer">
         <div class="container footer-wrapper">
