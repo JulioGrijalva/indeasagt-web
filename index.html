@@ -27,32 +27,33 @@
         </div>
 
         <p class="hero-text">
-            Diseño, planeación y consultoría técnica de alta ingeniería en Guatemala. Nos especializamos en la gestión integral de proyectos energéticos y obras civiles bajo estrictas normativas ambientales.
+            Convertimos oportunidades de inversión e infraestructura en proyectos técnicamente viables y financieramente sostenibles en Guatemala. Asesoría de alta ingeniería en gestión de terrenos, energía renovable y evaluación de riesgos.
         </p>
 
-         <a href="#contacto" class="btn-primary">
-           Iniciar Consulta Técnica
-         </a>
+        <a href="#consulta-tecnica" class="btn-primary">
+            Iniciar Evaluación Técnica
+        </a>
         
-        <h2 class="section-title">Nuestras Líneas de Negocio</h2>
+        <h2 class="section-title">¿En Qué Podemos Ayudarle?</h2>
         <div class="service-grid">
             
             <div class="service-card">
-                <h3>Topografía, Avalúos e Ingeniería</h3>
-                <p>Medición de terrenos, avalúos comerciales y estudios técnicos de mecánica de suelos. Asesoría especializada en ventajas estructurales y análisis de viabilidad antes de construir.</p>
+                <h3>📐 Territorio y Avalúos</h3>
+                <p>Determinación de valor real de mercado, topografía de precisión, mecánica de suelos y certezas técnico-legales antes de desarrollar o comercializar un inmueble.</p>
             </div>
             
             <div class="service-card">
-                <h3>Energía y Sustentabilidad</h3>
-                <p>Consultoría técnica y estructuración de plantas de generación limpia, optimizando recursos naturales con viabilidad ambiental y social.</p>
+                <h3>⚡ Energía y Sustentabilidad</h3>
+                <p>Evaluación de pre-factibilidad hídrica y solar, licenciamiento socio-ambiental y estructuración de plantas de generación limpia con estándares internacionales.</p>
             </div>
             
             <div class="service-card">
-                <h3>Consultoría de Inversión</h3>
-                <p>Análisis de presupuestos por inflación, gestión de activos y optimización de capital para proyectos de infraestructura de gran escala.</p>
+                <h3>💼 Inversión y Desarrollo</h3>
+                <p>Dictámenes técnico-financieros, gestión de riesgos de infraestructura y optimización de flujos de capital ajustados a variables del mercado local.</p>
             </div>
             
         </div>
+
         <section class="featured-project-section">
             <div class="container project-layout">
                 
@@ -60,10 +61,10 @@
                     <span class="project-tag">Proyecto Insignia</span>
                     <h2 class="project-title">Desarrollo Hidroeléctrico Sustentable</h2>
                     <p class="project-description">
-                        Estructuración de ingeniería y análisis de pre-factibilidad para el aprovechamiento de recursos hídricos con un enfoque ecosistémico. Este proyecto está diseñado para cumplir con los estándares internacionales de generación limpia, mitigación de impacto social y optimización de flujos de inversión.
+                        Estructuración de ingeniería y análisis de pre-factibilidad para el aprovechamiento de recursos hídricos con un enfoque ecosistémico. Demostración de capacidad en la mitigación de impactos socio-ambientales y modelado de flujos de inversión.
                     </p>
-                    <a href="#contacto" class="btn-secondary">
-                       Solicitar Resumen de Inversión
+                    <a href="#consulta-tecnica" class="btn-secondary">
+                        Solicitar Resumen de Inversión
                     </a>
                 </div>
 
@@ -87,59 +88,137 @@
                 </div>
 
             </div>
-               </section>
-                  <!-- [Sección anterior de la Hidroeléctrica...] -->
+        </section>
 
-                   <!-- Sección de Contacto Dinámica -->
-                 <section id="contacto" class="contact-section">
-                 <h2 class="section-title">Inicie una Consulta Técnica</h2> <p class="contact-subtitle">
-                    Si tiene un proyecto de infraestructura, energía o requiere una consultoría especializada, complete el formulario y nos comunicaremos con usted a la brevedad.
-                   </p>
+        <!-- Sección de Triaje / Consulta Técnica Interactiva (Wizard) -->
+        <section id="consulta-tecnica" class="contact-section wizard-section">
+            <h2 class="section-title">Inicie una Consulta Técnica</h2>
+            <p class="contact-subtitle">
+                Especifique la naturaleza de su requerimiento o propiedad. Nuestro sistema de triaje guiará su consulta con la dirección de ingeniería de INDEASA.
+            </p>
 
             <div class="contact-layout">
-                <!-- Formulario de Contacto -->
-                <form class="contact-form" action="https://formspree.io/f/tu-endpoint" method="POST">
-                    <div class="form-group">
-                        <label for="name" class="form-label">Nombre Completo</label>
-                        <input type="text" id="name" name="name" class="form-input" placeholder="Ej. Ing. Carlos Fuentes" required>
-                    </div>
-
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label for="email" class="form-label">Correo Electrónico</label>
-                            <input type="email" id="email" name="email" class="form-input" placeholder="correo@empresa.com" required>
+                
+                <!-- Wizard Interactivo -->
+                <div class="wizard-card">
+                    
+                    <!-- Encabezado y Barra de Progresión -->
+                    <div class="wizard-header">
+                        <div class="wizard-step-indicator">
+                            <span id="step-label">PASO 1 DE 3</span>
+                            <span id="step-title">Identificación del Proyecto</span>
                         </div>
-                        <div class="form-group">
-                            <label for="phone" class="form-label">Teléfono de Contacto</label>
-                            <input type="tel" id="phone" name="phone" class="form-input" placeholder="+502 5555-5555">
+                        <div class="wizard-progress-bar">
+                            <div id="progress-fill" class="progress-fill"></div>
                         </div>
                     </div>
 
-                    <div class="form-group">
-                        <label for="subject" class="form-label">Asunto / Tipo de Proyecto</label>
-                        <select id="subject" name="subject" class="form-select">
-                            <option value="medicion_avaluo">Medición de Terrenos y Avalúos</option>
-                            <option value="estudio_suelos">Asesoría de Suelos y Construcción</option>
-                            <option value="energia">Energía y Sustentabilidad</option>
-                            <option value="consultoria">Consultoría de Inversión</option>
-                        </select>
+                    <!-- PASO 1: Selección de Categoría -->
+                    <div id="step-1" class="wizard-step active">
+                        <h3 class="wizard-heading">Evaluación Técnica de Proyectos</h3>
+                        <p class="wizard-subheading">Seleccione la categoría que mejor describa su necesidad:</p>
+                        
+                        <div class="wizard-grid">
+                            <button type="button" class="category-card" onclick="selectCategory('land')">
+                                <div class="category-icon">📐</div>
+                                <h4>Territorio & Avalúos</h4>
+                                <p>Avalúos comerciales, topografía, desmembraciones y análisis de terreno.</p>
+                            </button>
+
+                            <button type="button" class="category-card" onclick="selectCategory('energy')">
+                                <div class="category-icon">⚡</div>
+                                <h4>Energía & Agua</h4>
+                                <p>Pre-factibilidad hídrica/solar, licencias y proyectos sustentables.</p>
+                            </button>
+
+                            <button type="button" class="category-card" onclick="selectCategory('investment')">
+                                <div class="category-icon">💼</div>
+                                <h4>Inversión & Riesgo</h4>
+                                <p>Estructuración técnica de proyectos de infraestructura y mitigación.</p>
+                            </button>
+                        </div>
                     </div>
 
-                    <div class="form-group">
-                        <label for="message" class="form-label">Detalles del Requerimiento</label>
-                        <textarea id="message" name="message" rows="5" class="form-textarea" placeholder="Describa brevemente el alcance de su proyecto..." required></textarea>
+                    <!-- PASO 2: Parámetros del Proyecto -->
+                    <div id="step-2" class="wizard-step">
+                        <h3 class="wizard-heading">Parámetros del Proyecto</h3>
+                        <p class="wizard-subheading">Aporte detalles clave para orientar la factibilidad inicial:</p>
+
+                        <div class="form-group">
+                            <label for="location" class="form-label">Ubicación del Inmueble o Recurso</label>
+                            <input type="text" id="location" class="form-input" placeholder="Ej. Alta Verapaz, Escuintla, Zona 10 Guatemala..." />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="stage" class="form-label">Etapa Actual del Proyecto</label>
+                            <select id="stage" class="form-select">
+                                <option value="initial">Idea o Inmueble Identificado</option>
+                                <option value="acquisition">En Proceso de Adquisición / Inversión</option>
+                                <option value="planning">Fase de Estudios Preliminares</option>
+                                <option value="permits">Revisión Técnica / Licencias</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="details" class="form-label">Descripción Breve o Requerimiento</label>
+                            <textarea id="details" rows="3" class="form-textarea" placeholder="Describa brevemente el alcance de su proyecto..."></textarea>
+                        </div>
+
+                        <div class="wizard-actions">
+                            <button type="button" class="btn-secondary" onclick="goToStep(1)">← Volver</button>
+                            <button type="button" class="btn-primary" onclick="goToStep(3)">Continuar →</button>
+                        </div>
                     </div>
 
-                    <button type="submit" class="btn-primary" style="width: 100%; border: none;">
-                        Enviar Mensaje Seguro
-                    </button>
-                </form>
+                    <!-- PASO 3: Datos de Contacto y Envío -->
+                    <div id="step-3" class="wizard-step">
+                        <h3 class="wizard-heading">Contacto Profesional</h3>
+                        <p class="wizard-subheading">Conectaremos estos datos con la agenda técnica de INDEASA.</p>
+
+                        <div id="diagnostic-box" class="diagnostic-box">
+                            <!-- Diagnóstico dinámico rellenado con JS -->
+                        </div>
+
+                        <form id="wizard-form" onsubmit="handleFormSubmit(event)">
+                            <div class="form-group">
+                                <label for="clientName" class="form-label">Nombre Completo</label>
+                                <input type="text" id="clientName" class="form-input" required placeholder="Ej. Ing. Carlos Fuentes" />
+                            </div>
+
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="clientEmail" class="form-label">Correo Electrónico</label>
+                                    <input type="email" id="clientEmail" class="form-input" required placeholder="correo@empresa.com" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="clientPhone" class="form-label">Teléfono / WhatsApp</label>
+                                    <input type="tel" id="clientPhone" class="form-input" required placeholder="+502 5555-5555" />
+                                </div>
+                            </div>
+
+                            <div class="wizard-actions">
+                                <button type="button" class="btn-secondary" onclick="goToStep(2)">← Volver</button>
+                                <button type="submit" class="btn-primary" style="border: none;">Solicitar Diagnóstico Técnico</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- PASO 4: Confirmación Final -->
+                    <div id="step-4" class="wizard-step text-center">
+                        <div class="success-icon">✓</div>
+                        <h3 class="wizard-heading">Solicitud Recibida</h3>
+                        <p class="wizard-subheading">Hemos registrado los parámetros de su proyecto. Un especialista en ingeniería de INDEASA revisará los datos y se pondrá en contacto en breve.</p>
+                        <button type="button" class="btn-secondary" onclick="resetWizard()">Realizar otra consulta técnica</button>
+                    </div>
+
+                </div>
 
                 <!-- Tarjeta de Información de Contacto Directo -->
                 <div class="contact-info-card">
                     <h3 class="info-card-title">Oficina Central</h3>
                     <p class="info-card-text">
-                        Nuestras oficinas están ubicadas en el centro corporativo de la Zona 10 de la Ciudad de Guatemala.
+                        Atención a inversionistas y desarrolladores en la Ciudad de Guatemala.
                     </p>
                     <div class="info-details">
                         <div class="info-item">
@@ -152,10 +231,10 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
     </main> <!-- Cierre del main container -->
-    
 
     <footer class="main-footer">
         <div class="container footer-wrapper">
@@ -176,5 +255,7 @@
         </div>
     </footer>
 
+    <!-- Script de Interactividad del Wizard -->
+    <script src="js/wizard.js"></script>
 </body>
 </html>

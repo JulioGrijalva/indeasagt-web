@@ -90,7 +90,7 @@ body {
 }
 
 /* ==========================================================================
-   Componente: Botón
+   Componente: Botones
    ========================================================================== */
 .btn-primary {
   background-color: var(--color-primary-green);
@@ -107,6 +107,23 @@ body {
 
 .btn-primary:hover {
   background-color: var(--color-brand-blue);
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary-orange);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: opacity 0.3s ease;
+}
+
+.btn-secondary:hover {
+  opacity: 0.9;
 }
 
 /* ==========================================================================
@@ -142,53 +159,6 @@ body {
 .service-card h3 {
   color: var(--color-primary-green);
   margin-top: 0;
-}
-
-/* ==========================================================================
-   Componente: Footer
-   ========================================================================== */
-.main-footer {
-  background-color: #1a1a1a;
-  color: #ccc;
-  padding: 40px 0;
-  font-size: 0.85rem;
-  border-top: 4px solid var(--color-primary-green);
-}
-
-.footer-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.footer-grid {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.footer-col h4 {
-  color: white;
-  margin-bottom: 10px;
-  font-size: 1rem;
-}
-
-.footer-col p {
-  max-width: 300px;
-  margin: 0 0 10px 0;
-}
-
-.footer-link {
-  color: var(--color-secondary-orange);
-  text-decoration: none;
-}
-
-.footer-bottom {
-  border-top: 1px solid #333;
-  padding-top: 20px;
-  text-align: center;
-  color: #777;
 }
 
 /* ==========================================================================
@@ -254,7 +224,6 @@ body {
   margin-bottom: 25px;
 }
 
-/* Fichas de especificaciones */
 .spec-item {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding-bottom: 12px;
@@ -281,26 +250,8 @@ body {
   display: block;
 }
 
-/* Ajuste específico para el botón en fondo oscuro */
-.btn-secondary {
-  background-color: var(--color-secondary-orange);
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-  text-decoration: none;
-  display: inline-block;
-  transition: opacity 0.3s ease;
-}
-
-.btn-secondary:hover {
-  opacity: 0.9;
-}
-
 /* ==========================================================================
-   Componente: Sección de Contacto Dinámica
+   Componente: Sección de Triaje Técnico (Wizard Interactivo)
    ========================================================================== */
 .contact-section {
   margin-top: 50px;
@@ -329,8 +280,8 @@ body {
   }
 }
 
-/* El Formulario */
-.contact-form {
+/* Tarjeta Contenedora del Wizard */
+.wizard-card {
   flex: 1.3;
   background-color: var(--color-bg-white);
   padding: 30px;
@@ -339,18 +290,100 @@ body {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
-.form-grid {
+.wizard-step {
+  display: none;
+}
+
+.wizard-step.active {
+  display: block;
+}
+
+/* Encabezado y Barra de Progreso */
+.wizard-header {
+  margin-bottom: 25px;
+}
+
+.wizard-step-indicator {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #64748b;
+  font-family: monospace;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.wizard-progress-bar {
+  width: 100%;
+  height: 6px;
+  background-color: #e2e8f0;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 33.33%;
+  background-color: var(--color-primary-green);
+  transition: width 0.3s ease;
+}
+
+.wizard-heading {
+  color: var(--color-brand-blue);
+  font-size: 1.3rem;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.wizard-subheading {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+/* Tarjetas de Selección de Categoría (Paso 1) */
+.wizard-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
 }
 
-@media (min-width: 640px) {
-  .form-grid {
-    grid-template-columns: 1fr 1fr;
-  }
+.category-card {
+  background-color: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 18px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
+.category-card:hover {
+  background-color: white;
+  border-color: var(--color-primary-green);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 135, 68, 0.1);
+}
+
+.category-card h4 {
+  color: var(--color-brand-blue);
+  margin: 10px 0 5px 0;
+  font-size: 1rem;
+}
+
+.category-card p {
+  color: #64748b;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.category-icon {
+  font-size: 1.8rem;
+}
+
+/* Campos de Formulario (Pasos 2 y 3) */
 .form-group {
   margin-bottom: 20px;
 }
@@ -365,7 +398,6 @@ body {
   letter-spacing: 0.5px;
 }
 
-/* Campos de entrada */
 .form-input,
 .form-select,
 .form-textarea {
@@ -390,7 +422,50 @@ body {
   background-color: white;
 }
 
-/* Tarjeta de Información de la Derecha */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 640px) {
+  .form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Cuadro de Diagnóstico Dinámico (Paso 3) */
+.diagnostic-box {
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 0.9rem;
+  color: #166534;
+  margin-bottom: 20px;
+}
+
+/* Botones de Navegación del Wizard */
+.wizard-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.success-icon {
+  font-size: 3.5rem;
+  color: var(--color-primary-green);
+  margin-bottom: 15px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Tarjeta de Información Directa (Derecha) */
 .contact-info-card {
   flex: 0.7;
   background-color: #f8fafc;
@@ -439,4 +514,51 @@ body {
 
 .info-link:hover {
   text-decoration: underline;
+}
+
+/* ==========================================================================
+   Componente: Footer
+   ========================================================================== */
+.main-footer {
+  background-color: #1a1a1a;
+  color: #ccc;
+  padding: 40px 0;
+  font-size: 0.85rem;
+  border-top: 4px solid var(--color-primary-green);
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-col h4 {
+  color: white;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.footer-col p {
+  max-width: 300px;
+  margin: 0 0 10px 0;
+}
+
+.footer-link {
+  color: var(--color-secondary-orange);
+  text-decoration: none;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  text-align: center;
+  color: #777;
 }
