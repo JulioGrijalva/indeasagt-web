@@ -9,6 +9,7 @@ Sitio institucional de INDEASA para presentar servicios de evaluación técnica 
 - `js/wizard.js`: navegación y envío del formulario.
 - `netlify.toml`: configuración de publicación y encabezados de seguridad.
 - `robots.txt` y `sitemap.xml`: archivos para motores de búsqueda.
+- `privacidad.html`: información sobre el uso de los datos del formulario.
 
 ## Formulario
 

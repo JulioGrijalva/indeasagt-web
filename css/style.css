@@ -9,6 +9,25 @@ body {
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -60px;
+  z-index: 100;
+  background: var(--color-brand-blue);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 6px;
+}
+
+.skip-link:focus {
+  top: 10px;
+}
+
 .container {
   max-width: 1000px;
   margin: 0 auto;
@@ -34,6 +53,7 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+  text-decoration: none;
 }
 
 .logo-badge {
@@ -51,10 +71,22 @@ body {
   letter-spacing: 1px;
 }
 
-.header-tagline {
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.main-nav a {
   color: var(--color-text-dark);
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: 0.92rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible {
+  color: var(--color-primary-green);
 }
 
 /* ==========================================================================
@@ -79,6 +111,9 @@ body {
   border-bottom: 3px solid var(--color-primary-green);
   padding-bottom: 5px;
   display: inline-block;
+  max-width: 760px;
+  font-size: clamp(2rem, 5vw, 3.7rem);
+  line-height: 1.08;
 }
 
 .hero-text {
@@ -87,6 +122,53 @@ body {
   color: #555;
   max-width: 700px;
   margin-bottom: 30px;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.btn-text {
+  color: var(--color-brand-blue);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid var(--color-secondary-orange);
+  padding-bottom: 3px;
+}
+
+.trust-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 34px 0 10px;
+}
+
+.trust-strip span {
+  background: #f5f7fb;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  border-radius: 999px;
+  padding: 8px 13px;
+  font-size: 0.86rem;
+  font-weight: 650;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(243, 115, 33, 0.45);
+  outline-offset: 3px;
+}
+
+#servicios,
+#proyecto,
+#consulta-tecnica {
+  scroll-margin-top: 90px;
 }
 
 /* ==========================================================================
@@ -594,4 +676,39 @@ body {
   padding-top: 20px;
   text-align: center;
   color: #777;
+}
+
+.privacy-page {
+  max-width: 760px;
+  margin: 55px auto 80px;
+  padding: 0 20px;
+  line-height: 1.7;
+}
+
+.privacy-page h1,
+.privacy-page h2 {
+  color: var(--color-brand-blue);
+}
+
+.privacy-page a {
+  color: var(--color-primary-green);
+  font-weight: 650;
+}
+
+@media (max-width: 720px) {
+  .header-wrapper {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .main-nav {
+    width: 100%;
+    gap: 12px 18px;
+    flex-wrap: wrap;
+  }
+
+  .hero-section {
+    margin-top: 28px;
+  }
 }
