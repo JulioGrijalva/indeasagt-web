@@ -109,6 +109,39 @@ body {
   background-color: var(--color-brand-blue);
 }
 
+.btn-primary:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.form-honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 10px 0 18px;
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.form-consent input {
+  margin-top: 3px;
+}
+
+.form-status {
+  min-height: 1.4em;
+  color: #b42318;
+  font-weight: 600;
+}
+
 .btn-secondary {
   background-color: var(--color-secondary-orange);
   color: white;

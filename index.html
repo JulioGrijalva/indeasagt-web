@@ -4,8 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INDEASA | Infraestructura y Desarrollo</title>
+    <meta name="description" content="INDEASA brinda asesoría técnica en territorio, avalúos, energía, agua e inversión en infraestructura para proyectos en Guatemala.">
+    <link rel="canonical" href="https://indeasagt.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_GT">
+    <meta property="og:title" content="INDEASA | Infraestructura y Desarrollo">
+    <meta property="og:description" content="Evaluación técnica para proyectos de territorio, energía e infraestructura en Guatemala.">
+    <meta property="og:url" content="https://indeasagt.com/">
+    <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "INDEASA",
+      "url": "https://indeasagt.com/",
+      "email": "ingeargueta@indeasagt.com",
+      "description": "Asesoría técnica en infraestructura, territorio, energía y evaluación de riesgos en Guatemala.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "12 Calle 1-25 Zona 10, Edificio Géminis 10, Torre Norte, Oficina 305",
+        "addressLocality": "Ciudad de Guatemala",
+        "addressCountry": "GT"
+      }
+    }
+    </script>
 </head>
 <body>
 
@@ -179,27 +203,42 @@
                             <!-- Diagnóstico dinámico rellenado con JS -->
                         </div>
 
-                        <form id="wizard-form" onsubmit="handleFormSubmit(event)">
+                        <form id="wizard-form" name="technical-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleFormSubmit(event)">
+                            <input type="hidden" name="form-name" value="technical-inquiry">
+                            <input type="hidden" id="formCategory" name="category">
+                            <input type="hidden" id="formLocation" name="location">
+                            <input type="hidden" id="formStage" name="stage">
+                            <input type="hidden" id="formDetails" name="details">
+                            <p class="form-honeypot" aria-hidden="true">
+                                <label>No llene este campo: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+                            </p>
                             <div class="form-group">
                                 <label for="clientName" class="form-label">Nombre Completo</label>
-                                <input type="text" id="clientName" class="form-input" required placeholder="Ej. Ing. Carlos Fuentes" />
+                                <input type="text" id="clientName" name="name" class="form-input" required autocomplete="name" placeholder="Ej. Ing. Carlos Fuentes" />
                             </div>
 
                             <div class="form-grid">
                                 <div class="form-group">
                                     <label for="clientEmail" class="form-label">Correo Electrónico</label>
-                                    <input type="email" id="clientEmail" class="form-input" required placeholder="correo@empresa.com" />
+                                    <input type="email" id="clientEmail" name="email" class="form-input" required autocomplete="email" placeholder="correo@empresa.com" />
                                 </div>
 
                                 <div class="form-group">
                                     <label for="clientPhone" class="form-label">Teléfono / WhatsApp</label>
-                                    <input type="tel" id="clientPhone" class="form-input" required placeholder="+502 5555-5555" />
+                                    <input type="tel" id="clientPhone" name="phone" class="form-input" required autocomplete="tel" placeholder="+502 5555-5555" />
                                 </div>
                             </div>
 
+                            <div class="form-consent">
+                                <input type="checkbox" id="privacyConsent" name="privacy-consent" value="accepted" required>
+                                <label for="privacyConsent">Autorizo a INDEASA a utilizar estos datos únicamente para responder a mi solicitud.</label>
+                            </div>
+
+                            <p id="form-status" class="form-status" role="alert" aria-live="polite"></p>
+
                             <div class="wizard-actions">
                                 <button type="button" class="btn-secondary" onclick="goToStep(2)">← Volver</button>
-                                <button type="submit" class="btn-primary" style="border: none;">Solicitar Diagnóstico Técnico</button>
+                                <button id="submit-button" type="submit" class="btn-primary" style="border: none;">Solicitar Diagnóstico Técnico</button>
                             </div>
                         </form>
                     </div>

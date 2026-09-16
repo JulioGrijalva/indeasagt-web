@@ -51,27 +51,49 @@ function updateUI() {
   }
 }
 
-function handleFormSubmit(event) {
+async function handleFormSubmit(event) {
   event.preventDefault();
 
-  const formData = {
-    category: selectedCategory,
-    location: document.getElementById('location').value,
-    stage: document.getElementById('stage').value,
-    details: document.getElementById('details').value,
-    name: document.getElementById('clientName').value,
-    email: document.getElementById('clientEmail').value,
-    phone: document.getElementById('clientPhone').value
-  };
+  const form = event.currentTarget;
+  const submitButton = document.getElementById('submit-button');
+  const formStatus = document.getElementById('form-status');
 
-  console.log("Datos de la consulta técnica:", formData);
-  
-  // Aquí puedes enviar los datos a Netlify Forms o a tu correo
-  goToStep(4);
+  document.getElementById('formCategory').value = selectedCategory;
+  document.getElementById('formLocation').value = document.getElementById('location').value.trim();
+  document.getElementById('formStage').value = document.getElementById('stage').value;
+  document.getElementById('formDetails').value = document.getElementById('details').value.trim();
+
+  submitButton.disabled = true;
+  submitButton.textContent = 'Enviando solicitud…';
+  formStatus.textContent = '';
+
+  try {
+    const response = await fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(new FormData(form)).toString()
+    });
+
+    if (!response.ok) {
+      throw new Error(`Solicitud rechazada con estado ${response.status}`);
+    }
+
+    goToStep(4);
+  } catch (error) {
+    console.error('No fue posible enviar la solicitud:', error);
+    formStatus.textContent = 'No pudimos enviar su solicitud. Inténtelo nuevamente o escriba a ingeargueta@indeasagt.com.';
+  } finally {
+    submitButton.disabled = false;
+    submitButton.textContent = 'Solicitar Diagnóstico Técnico';
+  }
 }
 
 function resetWizard() {
   document.getElementById('wizard-form').reset();
+  document.getElementById('location').value = '';
+  document.getElementById('stage').value = 'initial';
+  document.getElementById('details').value = '';
+  document.getElementById('form-status').textContent = '';
   selectedCategory = '';
   goToStep(1);
 }
