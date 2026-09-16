@@ -32,33 +32,46 @@
     </script>
 </head>
 <body>
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
 
     <header class="main-header">
         <div class="container header-wrapper">
-            <div class="logo-container">
+            <a class="logo-container" href="#inicio" aria-label="INDEASA, inicio">
                 <div class="logo-badge">I</div>
                 <span class="logo-text">INDEASA</span>
-            </div>
-            <span class="header-tagline">Infraestructura y Desarrollo</span>
+            </a>
+            <nav class="main-nav" aria-label="Navegación principal">
+                <a href="#servicios">Servicios</a>
+                <a href="#proyecto">Proyecto</a>
+                <a href="#consulta-tecnica">Consulta</a>
+                <a href="mailto:indeasa23@gmail.com">Contacto</a>
+            </nav>
         </div>
     </header>
 
-    <main class="container hero-section">
+    <main id="contenido-principal" class="container hero-section">
         
-        <div>
-            <span class="hero-tag">Proyecto Phoenix</span>
-            <h1 class="hero-title">INDEASA Digital Platform</h1>
+        <div id="inicio">
+            <span class="hero-tag">Infraestructura y desarrollo</span>
+            <h1 class="hero-title">Ingeniería para tomar mejores decisiones</h1>
         </div>
 
         <p class="hero-text">
-            Convertimos oportunidades de inversión e infraestructura en proyectos técnicamente viables y financieramente sostenibles en Guatemala. Asesoría de alta ingeniería en gestión de terrenos, energía renovable y evaluación de riesgos.
+            Orientamos proyectos de territorio, energía e infraestructura en Guatemala mediante evaluación técnica, análisis de riesgos y planificación responsable.
         </p>
 
-        <a href="#consulta-tecnica" class="btn-primary">
-            Iniciar Evaluación Técnica
-        </a>
+        <div class="hero-actions">
+            <a href="#consulta-tecnica" class="btn-primary">Solicitar evaluación inicial</a>
+            <a href="#servicios" class="btn-text">Conocer servicios</a>
+        </div>
+
+        <div class="trust-strip" aria-label="Principios de atención">
+            <span>Evaluación técnica</span>
+            <span>Enfoque en Guatemala</span>
+            <span>Atención profesional</span>
+        </div>
         
-        <h2 class="section-title">¿En Qué Podemos Ayudarle?</h2>
+        <h2 id="servicios" class="section-title">¿En qué podemos ayudarle?</h2>
         <div class="service-grid">
             
             <div class="service-card">
@@ -78,7 +91,7 @@
             
         </div>
 
-        <section class="featured-project-section">
+        <section id="proyecto" class="featured-project-section">
             <div class="container project-layout">
                 
                 <div class="project-info">
@@ -231,7 +244,7 @@
 
                             <div class="form-consent">
                                 <input type="checkbox" id="privacyConsent" name="privacy-consent" value="accepted" required>
-                                <label for="privacyConsent">Autorizo a INDEASA a utilizar estos datos únicamente para responder a mi solicitud.</label>
+                                <label for="privacyConsent">Autorizo a INDEASA a utilizar estos datos únicamente para responder a mi solicitud, según el <a href="privacidad.html" target="_blank" rel="noopener">aviso de privacidad</a>.</label>
                             </div>
 
                             <p id="form-status" class="form-status" role="alert" aria-live="polite"></p>
@@ -286,6 +299,7 @@
                     <h4>Contacto</h4>
                     <p>📍 12 Calle 1-25 Zona 10, Edificio Géminis 10, Torre Norte, Of. 305</p>
                     <p>✉️ <a href="mailto:indeasa23@gmail.com" class="footer-link">indeasa23@gmail.com</a></p>
+                    <p><a href="privacidad.html" class="footer-link">Aviso de privacidad</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
