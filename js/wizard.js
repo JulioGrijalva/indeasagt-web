@@ -81,7 +81,7 @@ async function handleFormSubmit(event) {
     goToStep(4);
   } catch (error) {
     console.error('No fue posible enviar la solicitud:', error);
-    formStatus.textContent = 'No pudimos enviar su solicitud. Inténtelo nuevamente o escriba a ingeargueta@indeasagt.com.';
+    formStatus.textContent = 'No pudimos enviar su solicitud. Inténtelo nuevamente o escriba a indeasa23@gmail.com.';
   } finally {
     submitButton.disabled = false;
     submitButton.textContent = 'Solicitar Diagnóstico Técnico';
