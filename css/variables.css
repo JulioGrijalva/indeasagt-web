@@ -5,9 +5,11 @@
 
 :root {
   /* Paleta corporativa INDEASA */
-  --color-primary-green: #008744;    /* Logo y elementos ambientales */
-  --color-secondary-orange: #f37321; /* Acentos y énfasis */
-  --color-brand-blue: #2e3192;       /* Tipografía corporativa principal */
+  --color-primary-green: #004b47;    /* Verde profundo de la portada */
+  --color-secondary-orange: #b54d18; /* Naranja legible sobre fondos claros */
+  --color-brand-blue: #082e46;       /* Azul oscuro del encabezado */
+  --color-lime: #9ad000;
+  --color-turquoise: #12a89a;
   
   /* Colores de soporte */
   --color-bg-white: #ffffff;
