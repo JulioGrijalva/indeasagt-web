@@ -786,3 +786,112 @@ textarea:focus-visible {
     margin-top: 28px;
   }
 }
+
+/* Identidad de la portada INDEASA - Solaire Energy aplicada a todo el sitio. */
+body { background: #f8fbf4; }
+
+.main-header {
+  background: linear-gradient(135deg, var(--color-lime) 0 11%, #fff 11.1%);
+  border-top: 7px solid var(--color-lime);
+  border-bottom-color: #dce5e2;
+}
+
+.logo-badge {
+  background: linear-gradient(135deg, var(--color-primary-green) 0 48%, var(--color-turquoise) 48%);
+}
+
+#inicio {
+  position: relative;
+  overflow: hidden;
+  padding: 48px clamp(22px, 6vw, 60px) 34px;
+  background: linear-gradient(145deg, #fff 0 78%, var(--color-lime) 78.1%);
+  border: 1px solid #dce5e2;
+  border-radius: 12px;
+}
+
+#inicio::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 175px;
+  height: 16px;
+  background: linear-gradient(110deg, var(--color-primary-green) 0 40%, var(--color-turquoise) 40% 78%, var(--color-lime) 78%);
+  transform: skewX(-35deg);
+  transform-origin: left top;
+}
+
+.hero-title { border-bottom-color: var(--color-lime); }
+.section-title { border-bottom: 3px solid var(--color-lime); }
+
+.trust-strip span {
+  background: #edf5e9;
+  border-color: #cbded0;
+  color: var(--color-primary-green);
+}
+
+a:focus-visible, button:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible {
+  outline: 3px solid var(--color-secondary-orange);
+}
+
+.solaire-cover {
+  background: linear-gradient(142deg, var(--color-lime) 0 38%, #fff 38.1%);
+}
+.solaire-stripes {
+  background: linear-gradient(133deg, transparent 0 24%, var(--color-primary-green) 24% 32%, var(--color-turquoise) 32% 53%, transparent 53%);
+}
+.solaire-name { color: var(--color-secondary-orange); }
+
+.service-card {
+  border-color: #dce5e2;
+  border-top: 5px solid var(--color-lime);
+}
+
+.featured-project-section {
+  background: linear-gradient(145deg, var(--color-primary-green) 0 77%, #086860 77.1%);
+  box-shadow: 0 10px 30px rgba(0, 75, 71, 0.16);
+}
+.project-tag { color: #e0f390; }
+.spec-label { color: #d2ebe5; }
+
+.wizard-card {
+  border-color: #cbded0;
+  border-top: 6px solid var(--color-lime);
+}
+.progress-fill { background: var(--color-turquoise); }
+.category-card { background: #f5faef; border-color: #cbded0; }
+
+.contact-info-card {
+  background: #f0f7e8;
+  border-color: #cbded0;
+  border-top: 6px solid var(--color-turquoise);
+}
+
+.main-footer {
+  background: #073b3b;
+  color: #e3f0ed;
+  border-top: 7px solid var(--color-lime);
+}
+.footer-link { color: #f7b487; }
+.footer-bottom { border-top-color: #5d817c; color: #d2e6e1; }
+
+.privacy-page {
+  padding: 32px clamp(20px, 5vw, 48px);
+  background: #fff;
+  border: 1px solid #dce5e2;
+  border-top: 7px solid var(--color-lime);
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 720px) {
+  #inicio { padding-top: 46px; background: #fff; }
+  .main-header { background: #fff; }
+}
+
+@media (max-width: 560px) {
+  .solaire-cover {
+    background: linear-gradient(145deg, var(--color-lime) 0 52%, #fff 52.1%);
+  }
+}
