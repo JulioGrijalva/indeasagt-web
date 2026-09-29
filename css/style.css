@@ -166,9 +166,83 @@ textarea:focus-visible {
 }
 
 #servicios,
+#solaire-energy,
 #proyecto,
 #consulta-tecnica {
   scroll-margin-top: 90px;
+}
+
+/* Encabezado de Solaire Energy inspirado en la portada de documentos de INDEASA. */
+.solaire-section {
+  margin: 48px 0 60px;
+  border: 1px solid #dce5e2;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.solaire-cover {
+  position: relative;
+  isolation: isolate;
+  background: linear-gradient(142deg, #9ad000 0 38%, #fff 38.1%);
+  min-height: 225px;
+  padding: 50px clamp(24px, 9vw, 90px) 32px;
+  box-sizing: border-box;
+}
+
+.solaire-stripes {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 170px;
+  height: 170px;
+  background: linear-gradient(133deg, transparent 0 24%, #004b47 24% 32%, #12a89a 32% 53%, transparent 53%);
+}
+
+.solaire-content { position: relative; }
+
+.solaire-eyebrow {
+  display: block;
+  color: #063b37;
+  font-size: .82rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.solaire-title {
+  color: #082e46;
+  font-size: clamp(1.75rem, 4.5vw, 3.25rem);
+  line-height: 1.15;
+  margin: 0 0 8px;
+}
+
+.solaire-dash { color: #287b36; }
+.solaire-name { color: #b54d18; }
+
+.solaire-content p {
+  color: #14251f;
+  font-size: clamp(1rem, 2.1vw, 1.25rem);
+  font-weight: 700;
+  margin: 0;
+}
+
+.solaire-intro {
+  background: #fff;
+  padding: 24px clamp(24px, 5vw, 48px) 30px;
+}
+
+.solaire-intro p {
+  max-width: 740px;
+  line-height: 1.6;
+  margin: 0 0 18px;
+}
+
+@media (max-width: 560px) {
+  .solaire-cover {
+    background: linear-gradient(145deg, #9ad000 0 52%, #fff 52.1%);
+    padding-top: 72px;
+  }
+  .solaire-stripes { width: 110px; height: 110px; }
 }
 
 /* ==========================================================================
