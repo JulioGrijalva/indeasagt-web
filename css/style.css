@@ -70,19 +70,16 @@ html {
   height: 72px;
   flex-shrink: 0;
   overflow: hidden;
-  border-radius: 50%;
+  border-radius: 8px;
   background: #000;
 }
 
-/* La imagen original se conserva; esta ventana muestra el logo circular central. */
+/* Mostrar la imagen completa, conservando sus proporciones. */
 .site-logo {
-  position: absolute;
   display: block;
-  width: 310.833333%;
-  max-width: none;
-  height: auto;
-  left: -101.666667%;
-  top: -1.666667%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .logo-copy { display: flex; flex-direction: column; gap: 4px; }
