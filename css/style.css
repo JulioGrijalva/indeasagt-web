@@ -47,29 +47,47 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 24px;
 }
 
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  flex-shrink: 0;
+  max-width: 100%;
+  min-height: 44px;
+  padding: 4px 0;
+  box-sizing: border-box;
+  background-color: var(--color-bg-white);
   text-decoration: none;
 }
 
-.logo-badge {
-  background-color: var(--color-primary-green);
-  color: white;
-  font-weight: bold;
-  padding: 5px 12px;
-  border-radius: 6px;
+.site-logo-frame {
+  position: relative;
+  display: block;
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #000;
 }
 
-.logo-text {
-  font-weight: 800;
-  color: var(--color-brand-blue);
-  font-size: 1.4rem;
-  letter-spacing: 1px;
+/* La imagen original se conserva; esta ventana muestra el logo circular central. */
+.site-logo {
+  position: absolute;
+  display: block;
+  width: 310.833333%;
+  max-width: none;
+  height: auto;
+  left: -101.666667%;
+  top: -1.666667%;
 }
+
+.logo-copy { display: flex; flex-direction: column; gap: 4px; }
+.logo-name { color: var(--color-brand-blue); font-size: 1.4rem; line-height: 1.1; }
+.logo-unit { color: var(--color-primary-green); font-size: 0.85rem; font-weight: 650; }
 
 .main-nav {
   display: flex;
@@ -871,10 +889,6 @@ body { background: #f8fbf4; }
   border-bottom-color: #dce5e2;
 }
 
-.logo-badge {
-  background: linear-gradient(135deg, var(--color-primary-green) 0 48%, var(--color-turquoise) 48%);
-}
-
 #inicio {
   position: relative;
   overflow: hidden;
@@ -1042,5 +1056,12 @@ select:focus-visible, textarea:focus-visible {
   .technical-proposal {
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
     gap: 40px;
+  }
+}
+
+@media (max-width: 560px) {
+  .site-logo-frame {
+    width: 64px;
+    height: 64px;
   }
 }
